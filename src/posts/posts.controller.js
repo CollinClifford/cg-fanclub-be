@@ -99,4 +99,5 @@ module.exports = {
     asyncErrorBoundary(update),
   ],
   delete: [asyncErrorBoundary(postExists), asyncErrorBoundary(destroy)],
+  
 };
