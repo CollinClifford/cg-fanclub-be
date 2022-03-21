@@ -3,6 +3,8 @@ const app = express();
 const morgan = require("morgan");
 app.use(morgan("dev"));
 const postsRouter = require("./posts/posts.router");
+const cors = require("cors")
+app.use(cors());
 
 app.use(express.json());
 
