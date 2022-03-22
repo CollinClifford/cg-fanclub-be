@@ -13,4 +13,13 @@ module.exports = {
       directory: path.join(__dirname, "src", "db", "seeds"),
     },
   },
+  production: {
+    connection: DATABASE_URL,
+    migrations: {
+      directory: path.join(__dirname, "src", "db", "migrations"),
+    },
+    seeds: {
+      directory: path.join(__dirname, "src", "db", "seeds"),
+    },
+  },
 };
