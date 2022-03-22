@@ -1,12 +1,12 @@
-const express = require("express");
-const app = express();
-const morgan = require("morgan");
-app.use(morgan("dev"));
 const postsRouter = require("./posts/posts.router");
-const cors = require("cors")
-app.use(cors());
+const express = require("express");
+const morgan = require("morgan");
+const app = express();
+const cors = require("cors");
 
 app.use(express.json());
+app.use(morgan("dev"));
+app.use(cors());
 
 app.use("/posts", postsRouter);
 
